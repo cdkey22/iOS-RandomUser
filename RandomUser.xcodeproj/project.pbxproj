@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		81BBB01C1D7EC78F00ABB134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB01B1D7EC78F00ABB134 /* main.m */; };
 		81BBB01F1D7EC78F00ABB134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB01E1D7EC78F00ABB134 /* AppDelegate.m */; };
-		81BBB0221D7EC78F00ABB134 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0211D7EC78F00ABB134 /* ViewController.m */; };
+		81BBB0221D7EC78F00ABB134 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0211D7EC78F00ABB134 /* HomeController.m */; };
 		81BBB0251D7EC78F00ABB134 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BBB0231D7EC78F00ABB134 /* Main.storyboard */; };
 		81BBB0271D7EC78F00ABB134 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81BBB0261D7EC78F00ABB134 /* Assets.xcassets */; };
 		81BBB02A1D7EC78F00ABB134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BBB0281D7EC78F00ABB134 /* LaunchScreen.storyboard */; };
+		81BBB03E1D7EF0F200ABB134 /* RandomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB03D1D7EF0F200ABB134 /* RandomUser.m */; };
+		81BBB0411D804B7700ABB134 /* RandomUserCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0401D804B7700ABB134 /* RandomUserCollection.m */; };
+		81BBB0441D806BC900ABB134 /* RandomUserTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0431D806BC900ABB134 /* RandomUserTableController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +23,18 @@
 		81BBB01B1D7EC78F00ABB134 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81BBB01D1D7EC78F00ABB134 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		81BBB01E1D7EC78F00ABB134 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		81BBB0201D7EC78F00ABB134 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		81BBB0211D7EC78F00ABB134 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		81BBB0201D7EC78F00ABB134 /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
+		81BBB0211D7EC78F00ABB134 /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
 		81BBB0241D7EC78F00ABB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81BBB0261D7EC78F00ABB134 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81BBB0291D7EC78F00ABB134 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81BBB02B1D7EC78F00ABB134 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81BBB03C1D7EF0F200ABB134 /* RandomUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUser.h; sourceTree = "<group>"; };
+		81BBB03D1D7EF0F200ABB134 /* RandomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUser.m; sourceTree = "<group>"; };
+		81BBB03F1D804B7700ABB134 /* RandomUserCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUserCollection.h; sourceTree = "<group>"; };
+		81BBB0401D804B7700ABB134 /* RandomUserCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUserCollection.m; sourceTree = "<group>"; };
+		81BBB0421D806BC900ABB134 /* RandomUserTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUserTableController.h; sourceTree = "<group>"; };
+		81BBB0431D806BC900ABB134 /* RandomUserTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUserTableController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +67,10 @@
 		81BBB0191D7EC78F00ABB134 /* RandomUser */ = {
 			isa = PBXGroup;
 			children = (
+				81BBB0371D7EEFF300ABB134 /* BuisnessObjects */,
+				81BBB0361D7EEF8A00ABB134 /* MainContent */,
 				81BBB01D1D7EC78F00ABB134 /* AppDelegate.h */,
 				81BBB01E1D7EC78F00ABB134 /* AppDelegate.m */,
-				81BBB0201D7EC78F00ABB134 /* ViewController.h */,
-				81BBB0211D7EC78F00ABB134 /* ViewController.m */,
 				81BBB0231D7EC78F00ABB134 /* Main.storyboard */,
 				81BBB0261D7EC78F00ABB134 /* Assets.xcassets */,
 				81BBB0281D7EC78F00ABB134 /* LaunchScreen.storyboard */,
@@ -77,6 +86,28 @@
 				81BBB01B1D7EC78F00ABB134 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		81BBB0361D7EEF8A00ABB134 /* MainContent */ = {
+			isa = PBXGroup;
+			children = (
+				81BBB0201D7EC78F00ABB134 /* HomeController.h */,
+				81BBB0211D7EC78F00ABB134 /* HomeController.m */,
+				81BBB0421D806BC900ABB134 /* RandomUserTableController.h */,
+				81BBB0431D806BC900ABB134 /* RandomUserTableController.m */,
+			);
+			name = MainContent;
+			sourceTree = "<group>";
+		};
+		81BBB0371D7EEFF300ABB134 /* BuisnessObjects */ = {
+			isa = PBXGroup;
+			children = (
+				81BBB03C1D7EF0F200ABB134 /* RandomUser.h */,
+				81BBB03D1D7EF0F200ABB134 /* RandomUser.m */,
+				81BBB03F1D804B7700ABB134 /* RandomUserCollection.h */,
+				81BBB0401D804B7700ABB134 /* RandomUserCollection.m */,
+			);
+			name = BuisnessObjects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,8 +180,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81BBB0221D7EC78F00ABB134 /* ViewController.m in Sources */,
+				81BBB0221D7EC78F00ABB134 /* HomeController.m in Sources */,
 				81BBB01F1D7EC78F00ABB134 /* AppDelegate.m in Sources */,
+				81BBB03E1D7EF0F200ABB134 /* RandomUser.m in Sources */,
+				81BBB0411D804B7700ABB134 /* RandomUserCollection.m in Sources */,
+				81BBB0441D806BC900ABB134 /* RandomUserTableController.m in Sources */,
 				81BBB01C1D7EC78F00ABB134 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,10 +299,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = RandomUser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saooti.RandomUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -276,10 +313,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				INFOPLIST_FILE = RandomUser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.saooti.RandomUser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -302,6 +342,7 @@
 				81BBB0301D7EC78F00ABB134 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
