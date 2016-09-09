@@ -36,4 +36,11 @@
     self.containerView.hidden = false;
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    if([[segue identifier] isEqualToString:@"embedTable"]){
+        RandomUserTableViewController* controller = [segue destinationViewController];
+        controller.searchBar = self.searchBar;
+    }
+}
+
 @end

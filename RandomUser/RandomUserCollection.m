@@ -28,20 +28,50 @@
     return self;
 }
 
-#pragma mark Getter & Setter
--(NSInteger)count{
-    return self->_users.count;
-}
-
 #pragma mark Public methods
--(RandomUser *) getItemAt:(NSInteger)index{
-    if(index >=0 && index < self->_users.count ){
-        return [self->_users objectAtIndex:index];
+-(RandomUser *) getItemAt:(NSInteger)index filter:(NSString*)filter{
+    if(index >=0){
+        NSArray<RandomUser*> *workingArray;
+        
+        if(filter != nil){
+            workingArray = [self getFilteredUsers:filter];
+        }else{
+            workingArray = self->_users;
+        }
+        
+        if(index < workingArray.count ){
+            return [workingArray objectAtIndex:index];
+        }
     }
     return nil;
 }
 
+- (NSInteger) getCount:(NSString*)filter{
+    if(filter != nil && filter.length> 0){
+        return [self getFilteredUsers:filter].count;
+    }else{
+        return self->_users.count;
+    }
+}
+
+
+
 #pragma mark Private methods
+
+- (NSArray<RandomUser *>*) getFilteredUsers:(NSString*)searchPattern{
+    if(searchPattern == nil || searchPattern.length == 0){
+        return self->_users;
+    } else {
+        NSMutableArray<RandomUser*>* results = [[NSMutableArray alloc] init];
+        for (RandomUser* user in self->_users) {
+            if([[user.fullName lowercaseString] containsString:[searchPattern lowercaseString]]){
+                [results addObject:user];
+            }
+        }
+        return results;
+    }
+}
+
 -(void) fetch{
     NSURLRequest* request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://api.randomuser.me/?results=20"]];
     if([[NSURLConnection alloc] initWithRequest:request delegate:self]){

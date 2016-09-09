@@ -23,15 +23,20 @@
     user.cellNumber = [rawContent objectForKey:@"cell"];
     user.imageUrl = [[rawContent objectForKey:@"picture"] objectForKey:@"medium"];
     [user fetchAvatar];
-    NSLog(@"RandomUser created : %@ ",user);
+    NSLog(@"RandomUser created : %@ ",user.fullName);
     
     return user;
+}
+
+- (NSString*) fullName{
+    NSString *fullName = [[NSArray arrayWithObjects:self.firstName,@" ",self.lastName,nil] componentsJoinedByString:@""];
+    return fullName;
 }
 
 - (void) fetchAvatar{
     NSURLRequest *avatarRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:_imageUrl]];
     if([[NSURLConnection alloc] initWithRequest:avatarRequest delegate:self]){
-        NSLog(@"Requesting the avatar at url %@",_imageUrl);
+        //NSLog(@"Requesting the avatar at url %@",_imageUrl);
     }
 }
 

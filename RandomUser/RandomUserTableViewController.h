@@ -9,9 +9,12 @@
 #import <UIKit/UIKit.h>
 #import "RandomUserCollection.h"
 
-@interface RandomUserTableViewController : UITableViewController<UITableViewDataSource>
+@interface RandomUserTableViewController : UITableViewController<UITableViewDataSource,UISearchBarDelegate,UITableViewDelegate>{
+    UISearchDisplayController* _searchController;
+}
 
 @property RandomUserCollection *users;
+@property UISearchBar *searchBar;
 @property (strong, nonatomic) IBOutlet UITableView *table;
 
 @end

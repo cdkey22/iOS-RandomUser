@@ -11,10 +11,9 @@
 
 @interface RandomUserCollection : NSObject<NSURLSessionDataDelegate>
 
-@property (readonly) NSInteger count;
-
 + (RandomUserCollection*) initAndFetch;
-- (RandomUser*) getItemAt:(NSInteger)index;
+- (RandomUser*) getItemAt:(NSInteger)index filter:(NSString*)filter;
+- (NSInteger) getCount:(NSString*)filter;
 
 
 @end

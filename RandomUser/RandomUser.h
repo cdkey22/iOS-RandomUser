@@ -19,6 +19,8 @@
 @property NSString* imageUrl;
 @property UIImage* avatar;
 
+@property (readonly) NSString* fullName;
+
 + (RandomUser*) parseFromJSON:(NSDictionary*) rawContent;
 
 @end
