@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		819AEA221D82BDB300CC317C /* RandomUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 819AEA211D82BDB300CC317C /* RandomUserCell.m */; };
 		81BBB01C1D7EC78F00ABB134 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB01B1D7EC78F00ABB134 /* main.m */; };
 		81BBB01F1D7EC78F00ABB134 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB01E1D7EC78F00ABB134 /* AppDelegate.m */; };
 		81BBB0221D7EC78F00ABB134 /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0211D7EC78F00ABB134 /* HomeController.m */; };
@@ -19,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		819AEA201D82BDB300CC317C /* RandomUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUserCell.h; sourceTree = "<group>"; };
+		819AEA211D82BDB300CC317C /* RandomUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUserCell.m; sourceTree = "<group>"; };
 		81BBB0171D7EC78F00ABB134 /* RandomUser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomUser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BBB01B1D7EC78F00ABB134 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		81BBB01D1D7EC78F00ABB134 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -105,6 +108,8 @@
 				81BBB0211D7EC78F00ABB134 /* HomeController.m */,
 				81BBB04A1D82A8FD00ABB134 /* RandomUserTableViewController.h */,
 				81BBB04B1D82A8FD00ABB134 /* RandomUserTableViewController.m */,
+				819AEA201D82BDB300CC317C /* RandomUserCell.h */,
+				819AEA211D82BDB300CC317C /* RandomUserCell.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				81BBB0411D804B7700ABB134 /* RandomUserCollection.m in Sources */,
 				81BBB04C1D82A8FD00ABB134 /* RandomUserTableViewController.m in Sources */,
 				81BBB01C1D7EC78F00ABB134 /* main.m in Sources */,
+				819AEA221D82BDB300CC317C /* RandomUserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

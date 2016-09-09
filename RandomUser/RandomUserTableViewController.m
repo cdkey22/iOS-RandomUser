@@ -8,6 +8,7 @@
 
 #import "RandomUserTableViewController.h"
 #import "AppDelegate.h"
+#import "RandomUserCell.h"
 
 @implementation RandomUserTableViewController
 
@@ -42,15 +43,23 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RandomUserCell"forIndexPath:indexPath];
+    RandomUserCell *cell = (RandomUserCell*)[tableView dequeueReusableCellWithIdentifier:@"RandomUserCell"forIndexPath:indexPath];
     if(self.users !=nil && indexPath.row < self.users.count){
         RandomUser *ru = [self.users getItemAt:indexPath.row];
+        
+        cell.avatarImage.layer.cornerRadius = cell.avatarImage.frame.size.width/2;
+        cell.avatarImage.clipsToBounds = YES;
+        cell.avatarImage.layer.borderWidth = 0.3f;
+        cell.avatarImage.layer.borderColor = [UIColor grayColor].CGColor;
+        
         if(ru != nil){
-            cell.textLabel.text = [[NSArray arrayWithObjects:ru.firstName,@" ",ru.lastName,nil] componentsJoinedByString:@""];
-            cell.imageView.image = ru.avatar;
+            cell.nameLabel.text = [[[NSArray arrayWithObjects:ru.firstName,@" ",ru.lastName,nil] componentsJoinedByString:@""] capitalizedString];
+            cell.emailLabel.text = ru.email;
+            cell.avatarImage.image = ru.avatar;
         }else{
-            cell.textLabel.text = nil;
-            cell.imageView.image = nil;
+            cell.nameLabel.text = nil;
+            cell.emailLabel.text = nil;
+            cell.avatarImage.image = nil;
         }
     }
     return cell;
