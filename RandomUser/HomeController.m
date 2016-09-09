@@ -6,10 +6,11 @@
 //  Copyright © 2016 Cédric Clavier. All rights reserved.
 //
 
+#import "AppDelegate.h"
 #import "HomeController.h"
 #import "RandomUser.h"
 #import "RandomUserCollection.h"
-#import "RandomUserTableController.h"
+#import "RandomUserTableViewController.h"
 
 @interface HomeController ()
 
@@ -20,20 +21,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.randomUsers = [RandomUserCollection initAndFetch];
-    self.tableController = [RandomUserTableController initAndDelegate:self.randomUsers table:self.randomUserTable];
+    UIApplication* app = [UIApplication sharedApplication];
+    self.users = [(AppDelegate*)[app delegate] getUsers];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(onUsersChange:) name:@"randomusers/collection/init" object:nil];
-}
-
-- (void)onUsersChange:(NSNotification*) notification{
-    self.loadingLabel.hidden = true;
-    self.randomUserTable.hidden = false;
-    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)onUsersChange:(NSNotification*) notification{
+    self.loadingLabel.hidden = true;
+    self.containerView.hidden = false;
 }
 
 @end

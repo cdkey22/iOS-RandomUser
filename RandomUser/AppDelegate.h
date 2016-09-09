@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RandomUserCollection.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : UIResponder <UIApplicationDelegate>{
+    RandomUserCollection* _users;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+- (RandomUserCollection*) getUsers;
 
 
 @end

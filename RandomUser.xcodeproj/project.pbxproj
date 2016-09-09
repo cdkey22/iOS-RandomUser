@@ -15,7 +15,7 @@
 		81BBB02A1D7EC78F00ABB134 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BBB0281D7EC78F00ABB134 /* LaunchScreen.storyboard */; };
 		81BBB03E1D7EF0F200ABB134 /* RandomUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB03D1D7EF0F200ABB134 /* RandomUser.m */; };
 		81BBB0411D804B7700ABB134 /* RandomUserCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0401D804B7700ABB134 /* RandomUserCollection.m */; };
-		81BBB0441D806BC900ABB134 /* RandomUserTableController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB0431D806BC900ABB134 /* RandomUserTableController.m */; };
+		81BBB04C1D82A8FD00ABB134 /* RandomUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BBB04B1D82A8FD00ABB134 /* RandomUserTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		81BBB03D1D7EF0F200ABB134 /* RandomUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUser.m; sourceTree = "<group>"; };
 		81BBB03F1D804B7700ABB134 /* RandomUserCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUserCollection.h; sourceTree = "<group>"; };
 		81BBB0401D804B7700ABB134 /* RandomUserCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUserCollection.m; sourceTree = "<group>"; };
-		81BBB0421D806BC900ABB134 /* RandomUserTableController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUserTableController.h; sourceTree = "<group>"; };
-		81BBB0431D806BC900ABB134 /* RandomUserTableController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUserTableController.m; sourceTree = "<group>"; };
+		81BBB04A1D82A8FD00ABB134 /* RandomUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandomUserTableViewController.h; sourceTree = "<group>"; };
+		81BBB04B1D82A8FD00ABB134 /* RandomUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandomUserTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +68,11 @@
 			isa = PBXGroup;
 			children = (
 				81BBB0371D7EEFF300ABB134 /* BuisnessObjects */,
-				81BBB0361D7EEF8A00ABB134 /* MainContent */,
 				81BBB01D1D7EC78F00ABB134 /* AppDelegate.h */,
 				81BBB01E1D7EC78F00ABB134 /* AppDelegate.m */,
-				81BBB0231D7EC78F00ABB134 /* Main.storyboard */,
+				81BBB0491D82A5E500ABB134 /* Storyboard */,
+				81BBB0481D81BC9500ABB134 /* ViewController */,
 				81BBB0261D7EC78F00ABB134 /* Assets.xcassets */,
-				81BBB0281D7EC78F00ABB134 /* LaunchScreen.storyboard */,
 				81BBB02B1D7EC78F00ABB134 /* Info.plist */,
 				81BBB01A1D7EC78F00ABB134 /* Supporting Files */,
 			);
@@ -88,17 +87,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		81BBB0361D7EEF8A00ABB134 /* MainContent */ = {
-			isa = PBXGroup;
-			children = (
-				81BBB0201D7EC78F00ABB134 /* HomeController.h */,
-				81BBB0211D7EC78F00ABB134 /* HomeController.m */,
-				81BBB0421D806BC900ABB134 /* RandomUserTableController.h */,
-				81BBB0431D806BC900ABB134 /* RandomUserTableController.m */,
-			);
-			name = MainContent;
-			sourceTree = "<group>";
-		};
 		81BBB0371D7EEFF300ABB134 /* BuisnessObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +96,26 @@
 				81BBB0401D804B7700ABB134 /* RandomUserCollection.m */,
 			);
 			name = BuisnessObjects;
+			sourceTree = "<group>";
+		};
+		81BBB0481D81BC9500ABB134 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				81BBB0201D7EC78F00ABB134 /* HomeController.h */,
+				81BBB0211D7EC78F00ABB134 /* HomeController.m */,
+				81BBB04A1D82A8FD00ABB134 /* RandomUserTableViewController.h */,
+				81BBB04B1D82A8FD00ABB134 /* RandomUserTableViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		81BBB0491D82A5E500ABB134 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				81BBB0281D7EC78F00ABB134 /* LaunchScreen.storyboard */,
+				81BBB0231D7EC78F00ABB134 /* Main.storyboard */,
+			);
+			name = Storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +192,7 @@
 				81BBB01F1D7EC78F00ABB134 /* AppDelegate.m in Sources */,
 				81BBB03E1D7EF0F200ABB134 /* RandomUser.m in Sources */,
 				81BBB0411D804B7700ABB134 /* RandomUserCollection.m in Sources */,
-				81BBB0441D806BC900ABB134 /* RandomUserTableController.m in Sources */,
+				81BBB04C1D82A8FD00ABB134 /* RandomUserTableViewController.m in Sources */,
 				81BBB01C1D7EC78F00ABB134 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
